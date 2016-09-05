@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1472793118 source:c:\users\ing berazategui\desktop\utntp\tp1calculadora\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	"funciones.c"
+
+1472792901 c:\users\ing berazategui\desktop\utntp\tp1calculadora\funciones.c
+
