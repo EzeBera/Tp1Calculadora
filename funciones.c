@@ -45,7 +45,7 @@
 
 
 
-        float all (float a, float b){
+        void all (float a, float b){
 
     printf("suma = %f \n resta = %f \n division = %f \n multiplicacion = %f \n ",
            suma(a,b), resta(a,b), division(a,b), multiplicacion(a,b) );
@@ -53,5 +53,6 @@
            factorial(a);
            printf("\n");
             factorial(b);
+           printf("\n");
 
     }

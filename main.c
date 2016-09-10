@@ -22,9 +22,9 @@ int seleccion=1;
     else{
     printf("2. Ingresar 2do operando (B=%f) \n",b);}
     printf("3. Calcular la suma (A+B) \n");
-    printf("4. Calcular la resta (A-B) \n ");
-    printf("5. Calcular la division (A/B)\n ");
-    printf("6. Calcular la multiplicacion (A*B) \n ");
+    printf("4. Calcular la resta (A-B) \n");
+    printf("5. Calcular la division (A/B)\n");
+    printf("6. Calcular la multiplicacion (A*B) \n");
     printf("7. Calcular el factorial (A!) \n");
     printf("8. Calcular todas las operaciones \n");
     printf("9. Salir \n");
@@ -42,34 +42,85 @@ switch(seleccion)
                     flagB=1;
                 break;
             case 3:
-                printf("%f",suma(a,b));
+
+                                if (flagA==1 && flagB==1)
+                {
+                                printf("%f",suma(a,b));
+                }
+                else
+                {
+                    printf("Debe cargar ambos operandos.\n");
+                }
+
+
                 break;
             case 4:
-                printf("%f",resta(a,b));
+
+                                if (flagA==1 && flagB==1)
+                {
+                        printf("%f",resta(a,b));
+                }
+                else
+                {
+                    printf("Debe cargar ambos operandos.\n");
+                }
+
+
+
+
                 break;
             case 5:
-                printf("%f",division(a,b));
+                                                if (flagA==1 && flagB==1 && b!=0)
+                {
+                        printf("%f",division(a,b));
+                }
+                else
+                {
+                    printf("Debe cargar ambos operandos y el segundo distinto de 0.\n");
+                }
                 break;
-            case 6:
-                printf("%f",multiplicacion(a,b));
+            case 6:                                if (flagA==1 && flagB==1)
+                {
+                        printf("%f",multiplicacion(a,b));
+                }
+                else
+                {
+                    printf("Debe cargar ambos operandos.\n");
+                }
                 break;
-            case 7:
+            case 7:                                if (flagA==1 && flagB==1 && (a>0 && b>0))
+                {
+
                 printf("%f",factorial(a));
                 printf("%f",factorial(b));
+                }
+                else
+                {
+                    printf("Debe cargar ambos operandos con mayores a 0.\n");
+                }
                 break;
             case 8:
-                printf("%f",all(a,b));
+                                                if (flagA==1 && flagB==1)
+                {
+
+               all(a,b);
+                }
+                else
+                {
+                    printf("Debe cargar ambos operandos.\n");
+                }
+
                 break;
             case 9:
                 break;
             default:
-                printf("ingrese un valor valido");
+                printf("ingrese un valor entre 1 y 9 \n");
 
         }
          fflush(stdin);
-        getchar();
+system("pause");
 
-    }while(seleccion!='9');
+    }while(seleccion!=9);
 
     return 1;
 
